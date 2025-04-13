@@ -6,7 +6,7 @@ product_catalog ={
     "apple": Product("apple"),
     "pasta": Product("pasta"),
     "salt": Product("salt"),
-    "yogourt": Product("yogourt", chilled=True),
+    "yogurt": Product("yogourt", chilled=True),
     "milk": Product("milk", chilled=True),
     "cheese":Product("cheese", chilled=True),
     "insulin":Product("insulin",chilled=True, hazardous=True),

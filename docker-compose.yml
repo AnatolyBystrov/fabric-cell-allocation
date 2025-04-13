@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  cell-allocator:
+    build: .
+    container_name: fabric-cell-allocator
+    volumes:
+      - .:/app
+    command: python3 -m app.test_allocation

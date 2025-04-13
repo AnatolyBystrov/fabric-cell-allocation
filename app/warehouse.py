@@ -6,7 +6,7 @@ class Warehouse:
         self.rows = 10
         self.cols = 10
         self.shelves = [[None for _ in range(self.cols)] for _ in range(self.rows)]
-        self.__init__cells()
+        self._init_cells()
 
     def _init_cells(self):
         for x in range(self.rows):
