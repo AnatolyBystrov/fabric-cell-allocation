@@ -1,4 +1,8 @@
 FROM python:3.11-slim
+
 WORKDIR /app
 COPY . .
-CMD ["python3","-m", "app.test_alocation"]
+
+ENV PYTHONPATH=/app
+
+CMD ["python3", "app/test_allocation.py"]
