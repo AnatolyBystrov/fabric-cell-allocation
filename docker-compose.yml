@@ -1,9 +1,24 @@
-version: "3.9"
-
 services:
   cell-allocator:
     build: .
-    container_name: fabric-cell-allocator
+    container_name: cell-allocator
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000
+    depends_on:
+      - mongo
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
     volumes:
-      - .:/app
-    command: python3 -m app.test_allocation
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

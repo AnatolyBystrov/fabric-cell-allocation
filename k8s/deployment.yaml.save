@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fabric-cell-allocator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fabric-cell-allocator
+  template:
+    metadata:
+      labels:
+        app: fabric-cell-allocator
+    spec:
+      containers:
+        - name: fabric-cell-allocator
+          image: fabric-cell-allocation-cell-allocator:latest
+          imagePullPolicy: Never 
+          command: ["python3", "app/test_allocation.py"]

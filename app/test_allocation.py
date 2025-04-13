@@ -23,7 +23,7 @@ if __name__== "__main__":
     test_allocation_scenario("Scenatrio 1.2","bamba", 6, True, "0,0")
 
     #Scenatio 2
-    test_allocation_scenario("Scenario 2", "yogurt", 6, True, "7,0")
+    test_allocation_scenario("Scenario 2", "yogourt", 6, True, "7,0")
 
     #Scenario 3
     test_allocation_scenario("Scenario 3", "apple",11, False)
