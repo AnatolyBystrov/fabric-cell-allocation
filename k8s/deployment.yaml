@@ -20,3 +20,4 @@ spec:
             - name: PYTHONPATH
               value: /app
           command: ["python3", "app/test_allocation.py"]
+# k8s deployment definition for cell allocator
